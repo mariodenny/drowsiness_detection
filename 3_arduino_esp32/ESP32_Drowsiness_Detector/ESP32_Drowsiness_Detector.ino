@@ -1,17 +1,16 @@
-// 3_arduino_esp32/ESP32_Drowsiness_Detector.ino
 #include "camera_handler.h"
 #include "tflite_model.h"
 #include "wifi_client.h"
 
 TFLiteModel mlModel;
-WiFiClient wifiClient;
+AlertClient wifiClient;
 
 // GANTI DENGAN KREDENSIAL WIFI ANDA
-const char* ssid = "Your_WiFi_SSID";
-const char* password = "Your_WiFi_Password";
+const char* ssid = "Ternak Lele Camon";
+const char* password = "AnimuS1903";
 
-// GANTI DENGAN ALAMAT IP KOMPUTER/LAPTOP ANDA
-const char* serverUrl = "http://192.168.1.100:5000"; 
+  // GANTI DENGAN ALAMAT IP KOMPUTER/LAPTOP ANDA
+  const char* serverUrl = "http://10.108.72.125:5000"; 
 
 unsigned long lastAlertTime = 0;
 const unsigned long ALERT_COOLDOWN = 10000; // 10 detik
@@ -38,8 +37,8 @@ void setup() {
     Serial.println("✅ WiFi connected");
   }
   
-  pinMode(12, OUTPUT); // Buzzer
-  pinMode(13, OUTPUT); // LED
+  // pinMode(12, OUTPUT); // Buzzer
+  // pinMode(13, OUTPUT); // LED
   
   Serial.println("✅ System ready!");
 }
