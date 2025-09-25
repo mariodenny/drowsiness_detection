@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Drowsiness Detection Dashboard</h1>
+        <p>Live alerts from ESP32-CAM device</p>
+        
+        <div class="status-box" id="status-box">
+            <h2>LAST STATUS</h2>
+            <p id="last-status">--</p>
+            <p id="last-confidence">Confidence: --%</p>
+            <p id="last-time">Time: --</p>
+        </div>
+
+        <h2>Recent Alerts Log</h2>
+        <table id="alerts-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th>Confidence</th>
+                    <th>Device ID</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

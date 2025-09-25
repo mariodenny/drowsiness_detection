@@ -118,7 +118,8 @@ def convert_to_tflite(model):
         f.write(tflite_model)
     
     print(f"TFLite model saved: {len(tflite_model)} bytes")
-    
+    output_dir = '3_arduino_esp32/generated'
+    os.makedirs(output_dir, exist_ok=True)
     # Convert to C array
     with open('3_arduino_esp32/generated/drowsiness_model.h', 'w') as f:
         f.write('const unsigned char drowsiness_model[] = {')
